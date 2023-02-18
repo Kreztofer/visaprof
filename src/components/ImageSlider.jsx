@@ -9,10 +9,9 @@ const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    console.log('test');
     timerRef.current = setTimeout(() => {
       goToPrevious();
-    }, 6000);
+    }, 5000);
   }, [currentIndex]);
 
   const goToPrevious = () => {
@@ -77,7 +76,7 @@ const ImageSlider = ({ slides }) => {
             ))}
           </div>
           <div className="absolute top-[78px] left-[210px]">
-            <img src={arrows} alt="arrows" />
+            <img src={arrows} className="w-[90%]" alt="arrows" />
           </div>
           <div className="border-2 border-[#162e40] hover:bg-transparent duration-150 bg-[#162E40] p-4 rounded-full w-[50px] m-auto mt-[50px] text-white hover:text-[#162e40]">
             <HiOutlineArrowRight />
